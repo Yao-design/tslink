@@ -1,0 +1,17 @@
+deviceType: CNTR
+fullName: Counter
+description: 计数器示例设备，演示 TSLink 基本功能
+version: "1.0.0"
+
+uplink:
+  - id: 0x01
+    name: count
+    format: u32
+    unit: count
+    description: 当前计数值
+
+downlink:
+  - id: 0x01
+    name: reset
+    format: void
+    description: 重置计数器

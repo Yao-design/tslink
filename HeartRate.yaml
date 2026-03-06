@@ -1,0 +1,23 @@
+deviceType: HR
+fullName: HeartRate
+description: 心率监测设备，支持实时心率、电量上报
+version: "1.0.0"
+
+uplink:
+  - id: 0x01
+    name: heartRate
+    format: u16
+    unit: bpm
+    description: 当前心率值
+
+  - id: 0x02
+    name: battery
+    format: u8
+    unit: "%"
+    description: 电池电量百分比
+
+downlink:
+  - id: 0x01
+    name: led
+    format: bool
+    description: LED 开关控制

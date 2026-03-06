@@ -1,0 +1,22 @@
+deviceType: LED
+fullName: LED
+description: LED 控制器，支持电源开关控制
+version: "1.0.0"
+
+uplink:
+  - id: 0x01
+    name: state
+    format: bool
+    description: 当前 LED 状态（true=开启，false=关闭）
+
+  - id: 0x02
+    name: battery
+    format: u8
+    unit: "%"
+    description: 电池电量百分比
+
+downlink:
+  - id: 0x01
+    name: power
+    format: bool
+    description: 电源开关（true=开启，false=关闭）

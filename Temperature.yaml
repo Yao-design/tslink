@@ -1,0 +1,24 @@
+deviceType: TEMP
+fullName: Temperature
+description: 温湿度传感器，支持温度、湿度数据采集和上报间隔配置
+version: "1.0.0"
+
+uplink:
+  - id: 0x01
+    name: temperature
+    format: i16
+    unit: celsius
+    description: 温度值（精度 0.1°C，需除以 10）
+
+  - id: 0x02
+    name: humidity
+    format: u8
+    unit: "%"
+    description: 湿度百分比
+
+downlink:
+  - id: 0x01
+    name: reportInterval
+    format: u16
+    unit: seconds
+    description: 上报间隔（秒）

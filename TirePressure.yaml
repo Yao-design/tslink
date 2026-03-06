@@ -1,0 +1,23 @@
+deviceType: TP
+fullName: TirePressure
+description: 胎压监测设备，支持胎压、温度、电量上报
+version: "1.0.0"
+
+uplink:
+  - id: 0x01
+    name: pressure
+    format: u16
+    unit: kpa
+    description: 胎压值（精度 0.1kPa，需除以 10）
+
+  - id: 0x02
+    name: temperature
+    format: i16
+    unit: celsius
+    description: 轮胎温度（精度 0.1°C，需除以 10）
+
+  - id: 0x03
+    name: battery
+    format: u8
+    unit: "%"
+    description: 电池电量百分比
